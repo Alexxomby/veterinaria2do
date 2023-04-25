@@ -1,15 +1,148 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./web/META-INF/js/vetvalidacion.js"></script>
+    <title>Clínica Veterinaria</title>
+    <link rel="stylesheet" href="./web/META-INF/css/style.css">
+</head>
+<body>
+
+
+
+<!-- Barra de navegación -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca">Acerca de</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+            <li><a href="#registro">Registro</a></li>
+            <li><a href="#mascota">Registro de Mascota</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sección de inicio -->
+<main>
+    <div id="inicio">
+        <section>
+            <h1>Clínica Veterinaria</h1>
+            <p>La clínica veterinaria "Mascotas Felices" es un centro de atención para animales ubicado en el centro de la ciudad. Ofrece una amplia gama de servicios, desde exámenes médicos y vacunas hasta cirugías de emergencia y terapia de rehabilitación. También cuenta con una tienda de mascotas bien surtida y un servicio de peluquería y baño.</p>
+            <br>
+
+            <p>Con un equipo altamente capacitado de veterinarios, la clínica se asegura de que los clientes reciban un servicio profesional y amable, y de que sus mascotas reciban la atención adecuada. "Mascotas Felices" es un lugar seguro y confiable para el cuidado de animales.</p>
+            <!-- Aquí puedes agregar la imagen -->
+            <div id="imagen">
+                <img src="./web/META-INF/IMG/pero.jpg" alt="Perro">
+            </div>
+        </section>
+    </div>
+
+    <!-- Sección Acerca de -->
+    <div id="acerca">
+        <section>
+            <h2>Acerca de nosotros</h2>
+            <p>Aquí puedes agregar información sobre la historia, misión, valores y equipo de la clínica.</p>
+        </section>
+    </div>
+
+    <!-- Sección Servicios -->
+    <div id="servicios">
+        <section>
+            <h2>Nuestros servicios</h2>
+            <p>Aquí puedes agregar información sobre los servicios ofrecidos por la clínica.</p>
+        </section>
+    </div>
+
+    <!-- Sección Testimonios -->
+    <div id="testimonios">
+        <section>
+            <h2>Testimonios</h2>
+            <p>Aquí puedes agregar testimonios o reseñas de clientes satisfechos.</p>
+        </section>
+    </div>
+
+    <!-- Sección Galería -->
+    <div id="galeria">
+        <section>
+            <h2>Galería de imágenes</h2>
+            <p>Aquí puedes agregar imágenes de las instalaciones, el equipo y las mascotas atendidas.</p>
+        </section>
+    </div>
+
+    <!-- Sección Ubicación -->
+    <div id="ubicacion">
+        <section>
+            <h2>Ubicación y dirección</h2>
+            <p>Aquí puedes agregar un mapa interactivo y la dirección de la clínica.</p>
+        </section>
+    </div>
+
+    <!-- Sección Contacto -->
+    <div id="contacto">
+        <section>
+            <h2>Contacto</h2>
+            <form name="formulario" action="" onsubmit="return validar(this)">
+                <label for="nombreContacto">Nombre:</label>
+                <input type="text" id="nombreContacto" name="nombreContacto">
+                <label for="correoContacto">Correo electrónico:</label>
+                <input type="email" id="correoContacto" name="correoContacto">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+            <p>Información de contacto y enlaces a redes sociales.</p>
+        </section>
+    </div>
+
+    <!-- Sección Preguntas frecuentes (FAQ) -->
+    <div id="faq">
+        <section>
+            <h2>Preguntas frecuentes</h2>
+            <p>Aquí puedes agregar preguntas y respuestas comunes sobre la clínica y sus servicios.</p>
+        </section>
+    </div>
+
+    <!-- Sección de registro de usuario -->
+    <div id="registro">
+        <section>
+            <h2>Registro de dueño</h2>
+            <form name="formulario2" action="" onsubmit="return validar2(this)">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena">
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Sección de registro de mascota -->
+    <div id="mascota">
+        <section>
+            <h2>Registro de mascota</h2>
+            <form name="formulario3" action="" onsubmit="return validar3(this)">
+                <label for="nombre">Nombre de la mascota:</label>
+                <input type="text" id="nombreMascota" name="nombreMascota">
+                <label for="especie">Especie:</label>
+                <input type="text" id="especie" name="especie">
+                <label for="raza">Raza:</label>
+                <input type="text" id="raza" name="raza">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad">
+                <button type="submit">Registrar mascota</button>
+            </form>
+        </section>
+    </div>
+</main>
+</body>
 </html>
